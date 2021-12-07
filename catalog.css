@@ -1,0 +1,534 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.block {
+    display: flex !important;
+}
+
+.left-menu {
+    display: none;
+}
+/*-----Header-----*/
+.header {
+    padding: 20px 20px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.11);
+}
+
+.header-wrapper {
+    display: flex;
+    max-width: 1200px;
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo h1 {
+    align-items: center;
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.header-menu {
+    display: flex;
+    max-width: 420px;
+    flex-basis: 100%;
+}
+
+.header-menu ul {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.header-menu a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.header-menu-mobile {
+    display: none;
+}
+
+.header-menu-cat {
+    margin-right: 10px;
+}
+
+.header-menu-info {
+    margin-right: 5px;
+}
+
+.first-menu {
+    background-color: #ececec;
+    padding: 15px 20px;
+    border-radius: 12px;
+    transition: 0.5s;
+}
+
+.first-menu:hover {
+    background-color: #e2e2e2;
+    cursor: pointer;
+}
+
+.second-menu img {
+    transition: 0.5s;
+}
+
+.second-bar:hover > a img {
+    transform: rotate(0.5turn);
+}
+
+.second-menu-scroll {
+    position: absolute;
+    top: 22px;
+    left: 0px;
+    display: none;
+    width: 160px;
+    height: 175px;
+    border-radius: 15px;
+    background-color: white;
+    border: 1px solid #9e9e9e8f;
+    z-index: 999;
+    overflow: hidden;
+}
+.second-menu-scroll .second-menu-bar {
+    display: block;
+}
+
+.second-bar {
+    position: relative;
+    padding-bottom: 0px;
+}
+
+.second-menu-bar li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.second-menu-bar li:hover {
+    background-color: #9e9e9e65;
+}
+
+.second-bar:hover > .second-menu-scroll {
+    display: flex;
+}
+
+.menu-catalog {
+    position: absolute;
+    top: 96px;
+    left: 0;
+    width: calc(100vw - 20px);
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.menu-catalog .catalog-item {
+    margin-bottom: 40px;
+}
+
+.menu-catalog-wrapper {
+    display: flex;
+    max-width: 1200px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.catalog-item ul {
+    display: block;
+}
+
+.catalog-item h2 {
+    margin-bottom: 20px;
+}
+
+.catalog-item ul li {
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.catalog-item ul li:hover {
+    color: rgb(75, 75, 189);
+}
+
+@media (max-width: 1250px) {
+    .menu-catalog-wrapper {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .header-menu {
+        display: none;
+    }
+    .header-menu-mobile {
+        display: block;
+    }
+}
+/*-----Main-----*/
+
+.main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.11);
+}
+
+.main-wrapper {
+    max-width: 1200px;
+    flex-basis: 100%;
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+}
+
+/*-----Price-----*/
+.main-price {
+    padding: 20px 0;
+}
+
+.price-menu {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.price-menu ul {
+    max-width: 810px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.price-menu li {
+    margin-bottom: 15px;
+    list-style-type: none;
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.price-menu li pre {
+    list-style-type: none;
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.price-menu li:last-child {
+    margin-right: 0;
+}
+
+.price-menu-active {
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 1px solid #9e9e9e;
+}
+
+.price-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.price-item {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    max-width: 580px;
+    height: 400px;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #9e9e9e;
+    border-radius: 25px;
+}
+
+.price-item-img {
+    width: 267px;
+    height: 267px;
+}
+.price-item-img img {
+    width: 100%;
+}
+.price-item-content h3 {
+    margin-bottom: 15px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+}
+.price-item-content ul li {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    list-style-type: none;
+}
+
+.price-item-content p {
+    margin: 15px 0;
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.price-item-content button {
+    padding: 10px 20px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #ececec;
+    border-radius: 15px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.price-popup {
+    position: absolute;
+    top: 35px;
+    left: 315px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #ac2ff8;
+    color: white;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+.price-container-wrapper {
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 1210px) {
+    .price-container {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 768px) {
+    .price-item {
+        min-width: 300px;
+        height: 400px;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .price-item-img {
+        width: 180px;
+        height: 180px;
+    }
+    .price-item-content ul {
+        display: none;
+    }
+    .price-item-content h3 {
+        font-size: 20px;
+    }
+    .price-item-content p {
+        font-size: 18px;
+    }
+    .price-item-content button {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+    .price-popup {
+        top: 10px;
+        left: 10px;
+    }
+}
+
+@media (max-width: 425px) {
+    .price-menu-scroll ul {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .price-menu-scroll li {
+        margin-right: 25px;
+    }
+
+    .price-menu-scroll {
+        width: 200px;
+        overflow-x: scroll;
+    }
+}
+
+@media (max-width: 620px) {
+    .price-menu-scroll {
+        width: 400px;
+        overflow-x: scroll;
+    }
+
+    .price-container {
+        width: 400px;
+    }
+}
+
+@media (max-width: 414px) {
+    .price-menu-scroll {
+        width: 300px;
+        overflow-x: scroll;
+    }
+
+    .price-container {
+        width: 300px;
+    }
+
+    .price-item {
+        min-width: 230px;
+        height: 380px;
+    }
+    .price-item-img {
+        width: 150px;
+        height: 150px;
+    }
+    .price-item-content ul {
+        display: none;
+    }
+    .price-item-content h3 {
+        font-size: 18px;
+    }
+    .price-item-content p {
+        font-size: 21px;
+    }
+    .price-item-content button {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+    .price-popup {
+        top: 10px;
+        left: 10px;
+    }
+}
+@media (max-width: 319px) {
+    .price-menu-scroll {
+        width: 250px;
+        overflow-x: scroll;
+    }
+    .price-container {
+        width: 250px;
+    }
+}
+
+/*-----Footer-----*/
+.footer {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-wrapper {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 100%;
+}
+
+.footer-info {
+    max-width: 550px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-basis: 100%;
+}
+
+.footer-logo {
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-logo h2 {
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.footer-logo p {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #9e9e9e;
+}
+
+.footer-bar ul {
+    list-style-type: none;
+}
+
+.footer-bar li {
+    margin-bottom: 10px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.footer-bar h3 {
+    margin-bottom: 20px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.footer-links-title {
+    margin-bottom: 20px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.footer-telegram,
+.footer-mail {
+    margin-bottom: 10px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+@media (max-width: 850px) {
+    .footer-links {
+        display: none;
+    }
+}
